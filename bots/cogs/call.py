@@ -11,8 +11,8 @@ def make_call(messageContent, author):
     print("Placing phone call...")
     call = client.calls.create(
                             twiml='<Response><Say>Ahoy, World!</Say></Response>',
-                            to='+14086076301',
-                            from_='+12317296389'
+                            to='+XXXXXXXXXX',
+                            from_='+XXXXXXXX'
                         )
 
     #print(call.sid)

@@ -22,7 +22,7 @@ class Robin_Cog(commands.Cog):
     async def on_message(self, message):
         try:
             author = str(message.author)
-            valid_bots = ['LTC Hook#0000'] #'TrollEpollEolE#5214'
+            valid_bots = ['LTC Hook#0000']
             if author in valid_bots:
                 currency_dict = positions_check()
                 messageContent = message.content

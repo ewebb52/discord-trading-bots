@@ -53,4 +53,4 @@ def run_robinhood():
     #         await ctx.send("Please check to see if module was loaded in the first place")
     # ###### End Error Handlings #########
 
-    client.run('Nzc5MTMwOTM5NzQxMzA2OTMw.X7cEOw.apCqDkJAGRXhprO_ZIOQNui6B7A')
+    client.run('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

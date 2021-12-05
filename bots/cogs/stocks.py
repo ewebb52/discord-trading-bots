@@ -5,7 +5,7 @@ from cogs.scanner import *
 
 #Variables
 client = commands.Bot(command_prefix="$")
-channel = client.get_channel(677244478267850764)
+channel = client.get_channel(12345678910)
 
 class Stocks(commands.Cog):
     def __init__(self, client):

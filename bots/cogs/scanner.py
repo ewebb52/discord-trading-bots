@@ -21,7 +21,7 @@ class Stock:
 
 def scan_list():
     clear_lists()
-    f = open("/home/edw2139/discord/bots/txt/symbols.txt", "r")
+    f = open("/home/HOMEDIR/discord/bots/txt/symbols.txt", "r")
     for line in f:
         symbol_list.append(line.strip().split(' ', 1))
     f.close()
@@ -39,7 +39,7 @@ individual = []
 def scan_individual(stock_symbol):
     clear_lists()
     search_for = stock_symbol.upper()
-    f = open("/home/edw2139/discord/bots/cogs/symbols.txt", "r")
+    f = open("/home/HOMEDIR/discord/bots/cogs/symbols.txt", "r")
     for line in f:
         if search_for in line:
             individual.append(line.strip().split(' ', 1))

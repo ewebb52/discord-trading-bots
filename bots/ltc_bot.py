@@ -49,4 +49,4 @@ def run_ltc():
             await ctx.send("Please pass in all required arguments.")
 
 
-    client.run('NzgwMTk3MjQ0ODQ5NzUwMDU3.X7rlTg.2UQ8B7cyxZDjZ3M0dYFdAlA9f_c')
+    client.run('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

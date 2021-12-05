@@ -8,7 +8,7 @@ import pyotp
 import csv
 import os
 
-totp = pyotp.TOTP("DKNPSL7Z5DQ4CNFQ").now()
+totp = pyotp.TOTP("XXXXXXXXXXXX").now()
 
 client = commands.Bot(command_prefix="*")
 
@@ -76,9 +76,9 @@ class Robin_Cog(commands.Cog):
         #Get Appropriate File
         filename = ""
         if (rec == "ETH"):
-            filename = '/home/edw2139/discord/bots/txt/ETH/eth_rec.csv'
+            filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_rec.csv'
         if (rec == "LTC"):
-            filename = '/home/edw2139/discord/bots/txt/LTC/ltc_rec.csv'
+            filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_rec.csv'
         #Update Record
         with open(filename, mode='w') as f:
             field = [rec, order, price, date]

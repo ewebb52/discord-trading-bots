@@ -57,4 +57,4 @@ def run_rcb():
     #         await ctx.send("Please check to see if module was loaded in the first place")
     # ###### End Error Handlings #########
 
-    client.run('Nzc4NDUwMjE0NjQxOTkxNzMx.X7SKQg.EbKgWT7_Yg2uW-7ItosZT6zZmrc')
+    client.run('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

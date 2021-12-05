@@ -16,12 +16,12 @@ def run_ssb():
     async def ping(ctx):
         await ctx.send(f"Pong! {round(client.latency * 1000)}ms")
 
-    #############################TODO scan markets at 4am, 630am, 4pm
+    #############################scan markets at 4am, 630am, 4pm
     # @client.loop(seconds=5)
     # async def check_time():
     #     tz = timezone('EST')
     #     print(dt.now(tz))
-    #     channel = client.get_channel(677244478267850764)
+    #     channel = client.get_channel(12345678910)
     #     await channel.send('hello')
 
     ##########Begin of Cogs#############
@@ -56,4 +56,4 @@ def run_ssb():
     #         await ctx.send("Please check to see if module was loaded in the first place")
     # ###### End Error Handlings #########
 
-    client.run('Nzc4ODM4ODY2OTE2MTQ3MjEw.X7X0Nw.lX8hR9y5LCArMX4qx8EytEJzCrk')
+    client.run('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

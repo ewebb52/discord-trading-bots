@@ -13,7 +13,7 @@ import robin_stocks.helper as helper
 import robin_stocks.urls as urls
 ###############################
 
-#totp = pyotp.TOTP("DKNPSL7Z5DQ4CNFQ").now()
+#totp = pyotp.TOTP("XXXXXXXXXXXXXXXX").now()
 
 ###################### BEGIN ORDER FUNCTIONS ########################
 def start_order(symbol, order_type, currency_dict):
@@ -22,7 +22,6 @@ def start_order(symbol, order_type, currency_dict):
     print("\n!!!!{} {} started!!!!".format(symbol, order_type))
     if order_type == "BUY":
         created_at, bp = buy_order(symbol, order_type, bp)
-        print("after buy_order")
         return created_at, bp
     if order_type == "SELL":
         status, created_at = sell_order(symbol, order_type, currency_dict) 
@@ -104,9 +103,9 @@ def reset_wt(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_wt.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_wt.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_wt.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_wt.csv'
 
     f = open(filename, "w+")
     f.close()
@@ -115,9 +114,9 @@ def reset_obv(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_obv.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_obv.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_obv.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_obv.csv'
 
     f = open(filename, "w+")
     f.close()
@@ -126,9 +125,9 @@ def reset_stoch(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_stoch.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_stoch.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_stoch.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_stoch.csv'
 
     f = open(filename, "w+")
     f.close()
@@ -139,9 +138,9 @@ def check_wt(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_wt.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_wt.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_wt.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_wt.csv'
     #Read File
     wt_data = []
     wt_data.clear()
@@ -167,9 +166,9 @@ def check_stoch(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_stoch.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_stoch.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_stoch.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_stoch.csv'
     #Read File
     stoch_data = []
     stoch_data.clear()
@@ -193,9 +192,9 @@ def check_obv(symbol):
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_obv.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_obv.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_obv.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_obv.csv'
     #Read File
     obv_data = []
     obv_data.clear()
@@ -221,9 +220,9 @@ def check_alligator(symbol):
     alligator_status.clear()
     file = ""
     if symbol == "ETH":
-        file = '/home/edw2139/discord/bots/txt/ETH/eth_alligator.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/ETH/eth_alligator.csv'
     if symbol == "LTC":
-        file = '/home/edw2139/discord/bots/txt/LTC/ltc_alligator.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_alligator.csv'
     # Read File
     with open(file, mode='r') as rec:
         reader = csv.reader(rec)        
@@ -242,9 +241,9 @@ def check_rsi(symbol):
     rsi_status.clear()
     file = ""
     if symbol == "ETH":
-        file = '/home/edw2139/discord/bots/txt/ETH/eth_rsi_status.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/ETH/eth_rsi_status.csv'
     if symbol == "LTC":
-        file = '/home/edw2139/discord/bots/txt/LTC/ltc_rsi_status.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_rsi_status.csv'
     # Read File
     with open(file, mode='r') as rec:
         reader = csv.reader(rec)        
@@ -263,9 +262,9 @@ def check_rsi(symbol):
 def trigger_alligator(symbol, trigger):
     file = ""
     if symbol == "ETH":
-        file = '/home/edw2139/discord/bots/txt/ETH/eth_alligator.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/ETH/eth_alligator.csv'
     if symbol == "LTC":
-        file = '/home/edw2139/discord/bots/txt/LTC/ltc_alligator.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_alligator.csv'
     
     if trigger == "True":    
         with open(file, mode='w') as rec:
@@ -283,9 +282,9 @@ def trigger_alligator(symbol, trigger):
 def trigger_rsi(symbol, trigger):
     file = ""
     if symbol == "ETH":
-        file = '/home/edw2139/discord/bots/txt/ETH/eth_rsi_status.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/ETH/eth_rsi_status.csv'
     if symbol == "LTC":
-        file = '/home/edw2139/discord/bots/txt/LTC/ltc_rsi_status.csv'
+        file = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_rsi_status.csv'
     
     if trigger == "True":    
         with open(file, mode='w') as rec:
@@ -309,9 +308,9 @@ def get_percentage(symbol, current_price, order):   #last sell must be 1.5% high
     #Find last items History
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_rec.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_rec.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_rec.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_rec.csv'
     with open(filename, mode='r') as rec:
         reader = csv.reader(rec, delimiter=',')        
         for row in reader:
@@ -379,9 +378,9 @@ def check_acc_bp():
 def order_status(symbol, order, created_at):
     filename = ""
     if symbol == "ETH":
-        filename = '/home/edw2139/discord/bots/txt/ETH/eth_rec.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/ETH/eth_rec.csv'
     if symbol == "LTC":
-        filename = '/home/edw2139/discord/bots/txt/LTC/ltc_rec.csv'
+        filename = '/home/HOMEDIR/discord/bots/txt/LTC/ltc_rec.csv'
     while True:
         print("checking order status...")
         login()
@@ -439,10 +438,9 @@ def positions_check():
 
 #Login
 def login():
-    totp = pyotp.TOTP("DKNPSL7Z5DQ4CNFQ").now()
-    #new_login(username='ewebb4952@gmail.com', password='@1jN%NQYj9D4TR', expiresIn=86400, scope='internal', by_sms=True, store_session=True, mfa_code=totp)
+    totp = pyotp.TOTP("XXXXXXXXXXXXXX").now()
     "now here"
-    r.login('ewebb4952@gmail.com','@1jN%NQYj9D4TR', mfa_code=totp)
+    r.login('XXXXXXXXX@gmail.com','XXXXXXXXXXXXXX', mfa_code=totp)
     return 1
 
 
@@ -475,15 +473,6 @@ def generate_device_token():
 
 
 def respond_to_challenge(challenge_id, sms_code):
-    """This function will post to the challenge url.
-
-    :param challenge_id: The challenge id.
-    :type challenge_id: str
-    :param sms_code: The sms code.
-    :type sms_code: str
-    :returns:  The response from requests.
-
-    """
     url = urls.challenge_url(challenge_id)
     payload = {
         'response': sms_code
@@ -492,32 +481,6 @@ def respond_to_challenge(challenge_id, sms_code):
 
 
 def new_login(username=None, password=None, expiresIn=86400, scope='internal', by_sms=False, store_session=True, mfa_code=None):
-    """This function will effectively log the user into robinhood by getting an
-    authentication token and saving it to the session header. By default, it
-    will store the authentication token in a pickle file and load that value
-    on subsequent logins.
-
-    :param username: The username for your robinhood account, usually your email.
-        Not required if credentials are already cached and valid.
-    :type username: Optional[str]
-    :param password: The password for your robinhood account. Not required if
-        credentials are already cached and valid.
-    :type password: Optional[str]
-    :param expiresIn: The time until your login session expires. This is in seconds.
-    :type expiresIn: Optional[int]
-    :param scope: Specifies the scope of the authentication.
-    :type scope: Optional[str]
-    :param by_sms: Specifies whether to send an email(False) or an sms(True)
-    :type by_sms: Optional[boolean]
-    :param store_session: Specifies whether to save the log in authorization
-        for future log ins.
-    :type store_session: Optional[boolean]
-    :param mfa_code: MFA token if enabled.
-    :type mfa_code: Optional[str]
-    :returns:  A dictionary with log in information. The 'access_token' keyword contains the access token, and the 'detail' keyword \
-    contains information on whether the access token was generated or loaded from pickle file.
-
-    """
     device_token = generate_device_token()
     home_dir = os.path.expanduser("~")
     data_dir = os.path.join(home_dir, ".tokens")
@@ -533,7 +496,7 @@ def new_login(username=None, password=None, expiresIn=86400, scope='internal', b
 
     url = urls.login_url()
     payload = {
-        'client_id': 'c82SH0WZOsabOXGP2sxqcj34FxkvfnWRZBKlBjFS',
+        'client_id': 'XXXXXXXXXXXXXXXXXXXXXXXXX',
         'expires_in': expiresIn,
         'grant_type': 'password',
         'password': password,
@@ -634,9 +597,6 @@ def new_login(username=None, password=None, expiresIn=86400, scope='internal', b
 @helper.login_required
 def logout():
     """Removes authorization from the session header.
-
-    :returns: None
-
     """
     helper.set_login_state(False)
     helper.update_session('Authorization', None)

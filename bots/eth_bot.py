@@ -55,4 +55,4 @@ def run_eth():
     #         await ctx.send("Please check to see if module was loaded in the first place")
     # ###### End Error Handlings #########
 
-    client.run('NzgwMTg1NTI0OTI0MTg2NjY1.X7raZA.tfELJMG4qQuh0R6B5yTlxkm1SJc')
+    client.run('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')

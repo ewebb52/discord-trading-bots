@@ -19,7 +19,7 @@ class Listen(commands.Cog):
 
     @commands.command()
     async def update_holdings(self, ctx):
-        with open('/home/edw2139/discord/bots/txt/eth_rec.csv', mode='a') as ltc_csv:
+        with open('/home/HOMEDIR/discord/bots/txt/eth_rec.csv', mode='a') as ltc_csv:
             fields = ['crypto', 'order', 'price', 'date']
             writer = csv.writer(ltc_csv)
             writer.writerow(fields)
@@ -32,8 +32,8 @@ class Listen(commands.Cog):
         messageContent = message.content
         print("{} at {}:  {}".format(author, date, messageContent))
         #'Bitcoin Hook#0000', 
-        user_authors = ['TrollEpollEolE#5214', 'ImDirtyDan#5026'] #ETH Hook#0000 #LTC Hook#0000
-        channel = client.get_channel(778746857764945970)
+        user_authors = ['XXXXXXXXXXX', 'XXXXXXXXXXXXXXXX'] #ETH Hook#0000 #LTC Hook#0000
+        channel = client.get_channel(12345678910)
         #Call only if action needs to be taken
         #ETH
         if author == "ETH Hook#0000":
@@ -93,13 +93,13 @@ def obv_to_csv(messageContent):
 
     #On Balance Volumes
     if ("LTCUSD" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/LTC/ltc_obv.csv', mode='a') as ltc_csv2:
+        with open('/home/HOMEDIR/discord/bots/txt/LTC/ltc_obv.csv', mode='a') as ltc_csv2:
             fields = [date, time, obv]
             writer = csv.writer(ltc_csv2)
             writer.writerow(fields)
             ltc_csv2.close()
     if ("ETHUSD" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/ETH/eth_obv.csv', mode='a') as eth_csv2:
+        with open('/home/HOMEDIR/discord/bots/txt/ETH/eth_obv.csv', mode='a') as eth_csv2:
             fields = [date, time, obv]
             writer = csv.writer(eth_csv2)
             writer.writerow(fields)
@@ -113,13 +113,13 @@ def stoch_to_csv(messageContent):
 
     #Stoch
     if ("LTCUSD" in messageContent and "STOCH" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/LTC/ltc_stoch.csv', mode='a') as ltc_stoch:
+        with open('/home/HOMEDIR/discord/bots/txt/LTC/ltc_stoch.csv', mode='a') as ltc_stoch:
             fields = [date, time, stoch]
             writer = csv.writer(ltc_stoch)
             writer.writerow(fields)
             ltc_stoch.close()
     if ("ETHUSD" in messageContent and "STOCH" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/ETH/eth_stoch.csv', mode='a') as eth_stoch:
+        with open('/home/HOMEDIR/discord/bots/txt/ETH/eth_stoch.csv', mode='a') as eth_stoch:
             fields = [date, time, stoch]
             writer = csv.writer(eth_stoch)
             writer.writerow(fields)
@@ -138,13 +138,13 @@ def wt_to_csv(messageContent):
 
     #Stoch
     if ("LTCUSD" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/LTC/ltc_wt.csv', mode='a') as ltc_wt:
+        with open('/home/HOMEDIR/discord/bots/txt/LTC/ltc_wt.csv', mode='a') as ltc_wt:
             fields = [date, time, r, g, b]
             writer = csv.writer(ltc_wt)
             writer.writerow(fields)
             ltc_wt.close()
     if ("ETHUSD" in messageContent):
-        with open('/home/edw2139/discord/bots/txt/ETH/eth_wt.csv', mode='a') as eth_wt:
+        with open('/home/HOMEDIR/discord/bots/txt/ETH/eth_wt.csv', mode='a') as eth_wt:
             fields = [date, time, r, g, b]
             writer = csv.writer(eth_wt)
             writer.writerow(fields)
